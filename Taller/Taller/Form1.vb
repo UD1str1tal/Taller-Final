@@ -12,6 +12,8 @@
     Private Sub BalotoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BalotoToolStripMenuItem.Click
 
     End Sub
-
+    Private Sub mostrarPanel(panel As Panel)
+        panel. =  
+    End Sub
 
 End Class
