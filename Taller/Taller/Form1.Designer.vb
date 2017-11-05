@@ -22,16 +22,18 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.AplicacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BalotoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MatrizToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrdenarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -39,10 +41,19 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.AplicacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BalotoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RevanchaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RevanchaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MatrizToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -50,43 +61,9 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(978, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1804, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'AplicacionesToolStripMenuItem
-        '
-        Me.AplicacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadosToolStripMenuItem, Me.BalotoToolStripMenuItem, Me.MatrizToolStripMenuItem, Me.OrdenarToolStripMenuItem})
-        Me.AplicacionesToolStripMenuItem.Image = CType(resources.GetObject("AplicacionesToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.AplicacionesToolStripMenuItem.Name = "AplicacionesToolStripMenuItem"
-        Me.AplicacionesToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
-        Me.AplicacionesToolStripMenuItem.Text = "&Aplicaciones "
-        '
-        'DadosToolStripMenuItem
-        '
-        Me.DadosToolStripMenuItem.Image = CType(resources.GetObject("DadosToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DadosToolStripMenuItem.Name = "DadosToolStripMenuItem"
-        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.DadosToolStripMenuItem.Text = "&Dados"
-        '
-        'BalotoToolStripMenuItem
-        '
-        Me.BalotoToolStripMenuItem.Image = CType(resources.GetObject("BalotoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.BalotoToolStripMenuItem.Name = "BalotoToolStripMenuItem"
-        Me.BalotoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.BalotoToolStripMenuItem.Text = "&Baloto"
-        '
-        'MatrizToolStripMenuItem
-        '
-        Me.MatrizToolStripMenuItem.Name = "MatrizToolStripMenuItem"
-        Me.MatrizToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.MatrizToolStripMenuItem.Text = "&Matriz"
-        '
-        'OrdenarToolStripMenuItem
-        '
-        Me.OrdenarToolStripMenuItem.Name = "OrdenarToolStripMenuItem"
-        Me.OrdenarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.OrdenarToolStripMenuItem.Text = "&Ordenar"
         '
         'SalirToolStripMenuItem
         '
@@ -98,18 +75,49 @@ Partial Class Form1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(0, 27)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(977, 706)
         Me.Panel1.TabIndex = 2
         '
+        'Timer1
+        '
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Location = New System.Drawing.Point(992, 59)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(946, 552)
+        Me.Panel4.TabIndex = 1
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Perpetua Titling MT", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(456, 259)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(35, 34)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "0"
+        '
         'Panel3
         '
         Me.Panel3.AutoSize = True
-        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.BackgroundImage = Global.Taller.My.Resources.Resources.baloto
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label5)
@@ -121,6 +129,29 @@ Partial Class Form1
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(943, 552)
         Me.Panel3.TabIndex = 1
+        Me.Panel3.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Perpetua Titling MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(352, 217)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(211, 58)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "$23.200"
+        Me.Label8.Visible = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Perpetua Titling MT", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(285, 128)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(322, 58)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "REVANCHA"
+        Me.Label7.Visible = False
         '
         'Button1
         '
@@ -202,19 +233,68 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "0"
         '
-        'Panel2
+        'AplicacionesToolStripMenuItem
         '
-        Me.Panel2.Location = New System.Drawing.Point(12, 15)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(943, 112)
-        Me.Panel2.TabIndex = 0
+        Me.AplicacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadosToolStripMenuItem, Me.BalotoToolStripMenuItem, Me.MatrizToolStripMenuItem, Me.OrdenarToolStripMenuItem})
+        Me.AplicacionesToolStripMenuItem.Image = CType(resources.GetObject("AplicacionesToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AplicacionesToolStripMenuItem.Name = "AplicacionesToolStripMenuItem"
+        Me.AplicacionesToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
+        Me.AplicacionesToolStripMenuItem.Text = "&Aplicaciones "
+        '
+        'DadosToolStripMenuItem
+        '
+        Me.DadosToolStripMenuItem.Image = CType(resources.GetObject("DadosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DadosToolStripMenuItem.Name = "DadosToolStripMenuItem"
+        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DadosToolStripMenuItem.Text = "&Dados"
+        '
+        'BalotoToolStripMenuItem
+        '
+        Me.BalotoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RevanchaToolStripMenuItem, Me.RevanchaToolStripMenuItem1})
+        Me.BalotoToolStripMenuItem.Image = CType(resources.GetObject("BalotoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.BalotoToolStripMenuItem.Name = "BalotoToolStripMenuItem"
+        Me.BalotoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BalotoToolStripMenuItem.Text = "&Baloto"
+        '
+        'RevanchaToolStripMenuItem
+        '
+        Me.RevanchaToolStripMenuItem.Name = "RevanchaToolStripMenuItem"
+        Me.RevanchaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RevanchaToolStripMenuItem.Text = "&Jugar"
+        '
+        'RevanchaToolStripMenuItem1
+        '
+        Me.RevanchaToolStripMenuItem1.Name = "RevanchaToolStripMenuItem1"
+        Me.RevanchaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.RevanchaToolStripMenuItem1.Text = "&Revancha"
+        '
+        'MatrizToolStripMenuItem
+        '
+        Me.MatrizToolStripMenuItem.Name = "MatrizToolStripMenuItem"
+        Me.MatrizToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MatrizToolStripMenuItem.Text = "&Matriz"
+        '
+        'OrdenarToolStripMenuItem
+        '
+        Me.OrdenarToolStripMenuItem.Name = "OrdenarToolStripMenuItem"
+        Me.OrdenarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OrdenarToolStripMenuItem.Text = "&Ordenar"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(299, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(336, 124)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(978, 759)
+        Me.ClientSize = New System.Drawing.Size(1804, 924)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -225,8 +305,11 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -241,7 +324,6 @@ Partial Class Form1
     Friend WithEvents MatrizToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdenarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
@@ -249,4 +331,13 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents RevanchaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents RevanchaToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
