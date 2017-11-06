@@ -121,6 +121,17 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="AplicacionesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        awAADmsBVP4NBgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD7SURBVGhD7Zkx
+        CsJAEEUDCp7DeBwDpovHyjHUJnuE9RQ5RErTr7M4rEWGYbJrEeQ/eO3wXxFhsQIAgP8gdHUfriefbXd0
+        fCpxHlrXDK0vsOdTdj5j6lDgxKcSNGQiQ4GeT9lByFeEKCJEGmgVIYoIkQZaRYgiQqSBVhGiiBBpoNWN
+        hNB7Io4pcORTicZdRhoTY7KM7xk+BQD4FbvHy+3u85Tr/jYvPvbwPIzkVOD6j53GeDIUuPj55TGhwPU/
+        vzQEISxCFBEiDbSKEEWESAOtIkQRIdJAqwhRRIg00Oo2Qug90dOYGJMnvWf4VIKGuDimwPV/hgIAwAap
+        qjeRT0oIOf05GgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="DadosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
@@ -193,17 +204,6 @@
         wVOIGh+TA9pohNwrOyGaf4/FDtl9mJU4cXoO0YYmyVO7ZAm2V5yJOT/ou2QzhNtwRDHRR9WHwUlWtAOz
         wWWm4mcgM42PwHwuPpujYDs6H2nkk6tR4tjMR80OH/5EtINtfOxmXTu5fOI2Z3FB+RhcBP83xX+iqf4j
         wi/p8o9Pwlwdcb3YnR/cL6zN/M7U1L/3XvxwNXz0/QAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="AplicacionesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        awAADmsBVP4NBgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD7SURBVGhD7Zkx
-        CsJAEEUDCp7DeBwDpovHyjHUJnuE9RQ5RErTr7M4rEWGYbJrEeQ/eO3wXxFhsQIAgP8gdHUfriefbXd0
-        fCpxHlrXDK0vsOdTdj5j6lDgxKcSNGQiQ4GeT9lByFeEKCJEGmgVIYoIkQZaRYgiQqSBVhGiiBBpoNWN
-        hNB7Io4pcORTicZdRhoTY7KM7xk+BQD4FbvHy+3u85Tr/jYvPvbwPIzkVOD6j53GeDIUuPj55TGhwPU/
-        vzQEISxCFBEiDbSKEEWESAOtIkQRIdJAqwhRRIg00Oo2Qug90dOYGJMnvWf4VIKGuDimwPV/hgIAwAap
-        qjeRT0oIOf05GgAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
