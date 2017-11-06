@@ -34,8 +34,13 @@ Partial Class Form1
         Me.OrdenarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -48,6 +53,7 @@ Partial Class Form1
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -68,14 +74,17 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,7 +94,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(984, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(982, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -101,7 +110,7 @@ Partial Class Form1
         '
         Me.DadosToolStripMenuItem.Image = CType(resources.GetObject("DadosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DadosToolStripMenuItem.Name = "DadosToolStripMenuItem"
-        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.DadosToolStripMenuItem.Text = "&Dados"
         '
         'BalotoToolStripMenuItem
@@ -109,7 +118,7 @@ Partial Class Form1
         Me.BalotoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JugarToolStripMenuItem, Me.RevanchaToolStripMenuItem1})
         Me.BalotoToolStripMenuItem.Image = CType(resources.GetObject("BalotoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.BalotoToolStripMenuItem.Name = "BalotoToolStripMenuItem"
-        Me.BalotoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BalotoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.BalotoToolStripMenuItem.Text = "&Baloto"
         '
         'JugarToolStripMenuItem
@@ -127,13 +136,13 @@ Partial Class Form1
         'MatrizToolStripMenuItem
         '
         Me.MatrizToolStripMenuItem.Name = "MatrizToolStripMenuItem"
-        Me.MatrizToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MatrizToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.MatrizToolStripMenuItem.Text = "&Matriz "
         '
         'OrdenarToolStripMenuItem
         '
         Me.OrdenarToolStripMenuItem.Name = "OrdenarToolStripMenuItem"
-        Me.OrdenarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OrdenarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.OrdenarToolStripMenuItem.Text = "&Ordenar"
         '
         'SalirToolStripMenuItem
@@ -148,6 +157,7 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -157,22 +167,44 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(979, 706)
         Me.Panel1.TabIndex = 2
         '
-        'Panel3
+        'Panel6
         '
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(3, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(967, 682)
-        Me.Panel3.TabIndex = 4
-        Me.Panel3.Visible = False
+        Me.Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), System.Drawing.Image)
+        Me.Panel6.Controls.Add(Me.Button4)
+        Me.Panel6.Controls.Add(Me.PictureBox3)
+        Me.Panel6.Controls.Add(Me.PictureBox2)
+        Me.Panel6.Location = New System.Drawing.Point(976, 213)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(600, 301)
+        Me.Panel6.TabIndex = 13
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(476, 126)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(103, 55)
+        Me.Button4.TabIndex = 14
+        Me.Button4.Text = "Lanzar Dados"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(250, 73)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(155, 155)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(71, 74)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(155, 155)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
         '
         'Panel4
         '
@@ -191,6 +223,29 @@ Partial Class Form1
         Me.Panel4.Size = New System.Drawing.Size(970, 699)
         Me.Panel4.TabIndex = 5
         Me.Panel4.Visible = False
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.ForeColor = System.Drawing.Color.Green
+        Me.TextBox7.Location = New System.Drawing.Point(257, 190)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox7.Size = New System.Drawing.Size(81, 165)
+        Me.TextBox7.TabIndex = 12
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(261, 148)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(75, 23)
+        Me.Label16.TabIndex = 11
+        Me.Label16.Text = "Vector"
         '
         'TextBox6
         '
@@ -325,6 +380,23 @@ Partial Class Form1
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Ingresar Valores"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Controls.Add(Me.Label11)
+        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Location = New System.Drawing.Point(3, 3)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(967, 682)
+        Me.Panel3.TabIndex = 4
+        Me.Panel3.Visible = False
         '
         'Label11
         '
@@ -546,28 +618,12 @@ Partial Class Form1
         '
         Me.Timer2.Interval = 1000
         '
-        'Label16
+        'Timer3
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(261, 148)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(75, 23)
-        Me.Label16.TabIndex = 11
-        Me.Label16.Text = "Vector"
         '
-        'TextBox7
+        'Timer4
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.ForeColor = System.Drawing.Color.Green
-        Me.TextBox7.Location = New System.Drawing.Point(257, 190)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox7.Size = New System.Drawing.Size(81, 165)
-        Me.TextBox7.TabIndex = 12
+        Me.Timer4.Interval = 1000
         '
         'Form1
         '
@@ -575,7 +631,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(984, 736)
+        Me.ClientSize = New System.Drawing.Size(982, 736)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
@@ -586,14 +642,17 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -648,4 +707,10 @@ Partial Class Form1
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label16 As Label
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Button4 As Button
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Timer3 As Timer
+    Friend WithEvents Timer4 As Timer
 End Class

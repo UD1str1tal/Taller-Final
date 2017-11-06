@@ -1,7 +1,7 @@
 ﻿Public Class Form1
     Dim x As Integer = 0
     Dim y As Double = 0
-    Dim n As Integer
+    Public n, dado, dado1 As Integer
     Public vec1() As Double
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         End
@@ -40,6 +40,7 @@
         Panel3.Visible = False
         Panel2.Visible = True
         Panel4.Visible = 0
+        Panel6.Visible = 0
         PictureBox1.Visible = 1
         PictureBox1.Image = Image.FromFile("imbalotorevancha.png")
         Timer1.Enabled = 0
@@ -50,6 +51,7 @@
         Panel2.Visible = True
         PictureBox1.Visible = 1
         Panel4.Visible = 0
+        Panel6.Visible = 0
         Panel2.BackgroundImage = Image.FromFile("baloto.png")
         PictureBox1.Image = Image.FromFile("imbaloto.png")
     End Sub
@@ -204,6 +206,7 @@ ini1:
         Panel2.Visible = False
         PictureBox1.Visible = False
         Panel3.Visible = False
+        Panel6.Visible = 0
         Panel4.Visible = True
         'Panel4.BackColor = Color.FromArgb(RGB(193, 230, 202))
     End Sub
@@ -212,6 +215,7 @@ ini1:
         Panel2.Visible = False
         PictureBox1.Visible = False
         Panel4.Visible = 0
+        Panel6.Visible = 0
         Panel3.Visible = True
         Panel3.BackgroundImage = Image.FromFile("matriz.png")
         Panel3.Location = New Point(3, 3)
@@ -222,5 +226,56 @@ ini1:
         n = TextBox6.Text
         TextBox5.Text = ""
         mostrarVector(ordenarDescendente(vec1, n), n, TextBox5)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Timer3.Enabled = True
+        Timer4.Enabled = 1
+        y = 0
+    End Sub
+
+    Private Sub DadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DadosToolStripMenuItem.Click
+        Panel3.Visible = False
+        Panel2.Visible = 0
+        Panel4.Visible = 0
+        PictureBox1.Visible = 0
+        Panel6.Visible = 1
+        Panel6.Location = New Point(182, 190)
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        If (Timer4.Enabled = True) Then
+            Randomize()
+            dado = CInt((5 * Rnd()) + 1)
+            dado1 = CInt((5 * Rnd()) + 1)
+            mostrarDado(dado, PictureBox2)
+            mostrarDado(dado1, PictureBox3)
+        End If
+    End Sub
+
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        If (y = 1) Then
+            Timer3.Enabled = False
+            Timer4.Enabled = False
+        Else
+            y += 1
+        End If
+    End Sub
+
+    Public Sub mostrarDado(numDado As Integer, picture As PictureBox)
+        Select Case numDado
+            Case 1
+                picture.Image = Image.FromFile("d1.png")
+            Case 2
+                picture.Image = Image.FromFile("d2.png")
+            Case 3
+                picture.Image = Image.FromFile("d3.png")
+            Case 4
+                picture.Image = Image.FromFile("d4.png")
+            Case 5
+                picture.Image = Image.FromFile("d5.png")
+            Case 6
+                picture.Image = Image.FromFile("d6.png")
+        End Select
     End Sub
 End Class
