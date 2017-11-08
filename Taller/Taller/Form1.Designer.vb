@@ -27,34 +27,32 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AplicacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BalotoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JugarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RevanchaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MatrizToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BalotoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JugarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MatricesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AntisimetricaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -63,6 +61,7 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -81,17 +80,17 @@ Partial Class Form1
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionesToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionesToolStripMenuItem, Me.BalotoToolStripMenuItem1, Me.MatricesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(982, 24)
@@ -100,7 +99,7 @@ Partial Class Form1
         '
         'AplicacionesToolStripMenuItem
         '
-        Me.AplicacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadosToolStripMenuItem, Me.BalotoToolStripMenuItem, Me.MatrizToolStripMenuItem, Me.OrdenarToolStripMenuItem})
+        Me.AplicacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadosToolStripMenuItem, Me.OrdenarToolStripMenuItem})
         Me.AplicacionesToolStripMenuItem.Image = CType(resources.GetObject("AplicacionesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AplicacionesToolStripMenuItem.Name = "AplicacionesToolStripMenuItem"
         Me.AplicacionesToolStripMenuItem.Size = New System.Drawing.Size(105, 20)
@@ -110,40 +109,41 @@ Partial Class Form1
         '
         Me.DadosToolStripMenuItem.Image = CType(resources.GetObject("DadosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DadosToolStripMenuItem.Name = "DadosToolStripMenuItem"
-        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.DadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DadosToolStripMenuItem.Text = "&Dados"
-        '
-        'BalotoToolStripMenuItem
-        '
-        Me.BalotoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JugarToolStripMenuItem, Me.RevanchaToolStripMenuItem1})
-        Me.BalotoToolStripMenuItem.Image = CType(resources.GetObject("BalotoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.BalotoToolStripMenuItem.Name = "BalotoToolStripMenuItem"
-        Me.BalotoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.BalotoToolStripMenuItem.Text = "&Baloto"
-        '
-        'JugarToolStripMenuItem
-        '
-        Me.JugarToolStripMenuItem.Name = "JugarToolStripMenuItem"
-        Me.JugarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.JugarToolStripMenuItem.Text = "&Jugar"
-        '
-        'RevanchaToolStripMenuItem1
-        '
-        Me.RevanchaToolStripMenuItem1.Name = "RevanchaToolStripMenuItem1"
-        Me.RevanchaToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
-        Me.RevanchaToolStripMenuItem1.Text = "&Revancha"
-        '
-        'MatrizToolStripMenuItem
-        '
-        Me.MatrizToolStripMenuItem.Name = "MatrizToolStripMenuItem"
-        Me.MatrizToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.MatrizToolStripMenuItem.Text = "&Matriz "
         '
         'OrdenarToolStripMenuItem
         '
         Me.OrdenarToolStripMenuItem.Name = "OrdenarToolStripMenuItem"
         Me.OrdenarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.OrdenarToolStripMenuItem.Text = "&Ordenar"
+        '
+        'BalotoToolStripMenuItem1
+        '
+        Me.BalotoToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JugarToolStripMenuItem1})
+        Me.BalotoToolStripMenuItem1.Image = CType(resources.GetObject("BalotoToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.BalotoToolStripMenuItem1.Name = "BalotoToolStripMenuItem1"
+        Me.BalotoToolStripMenuItem1.Size = New System.Drawing.Size(69, 20)
+        Me.BalotoToolStripMenuItem1.Text = "&Baloto"
+        '
+        'JugarToolStripMenuItem1
+        '
+        Me.JugarToolStripMenuItem1.Name = "JugarToolStripMenuItem1"
+        Me.JugarToolStripMenuItem1.Size = New System.Drawing.Size(102, 22)
+        Me.JugarToolStripMenuItem1.Text = "&Jugar"
+        '
+        'MatricesToolStripMenuItem
+        '
+        Me.MatricesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AntisimetricaToolStripMenuItem})
+        Me.MatricesToolStripMenuItem.Name = "MatricesToolStripMenuItem"
+        Me.MatricesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.MatricesToolStripMenuItem.Text = "Matrices"
+        '
+        'AntisimetricaToolStripMenuItem
+        '
+        Me.AntisimetricaToolStripMenuItem.Name = "AntisimetricaToolStripMenuItem"
+        Me.AntisimetricaToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.AntisimetricaToolStripMenuItem.Text = "An&tisimetrica"
         '
         'SalirToolStripMenuItem
         '
@@ -206,6 +206,36 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Controls.Add(Me.Label11)
+        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Location = New System.Drawing.Point(3, 3)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(967, 682)
+        Me.Panel3.TabIndex = 4
+        Me.Panel3.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Century", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label11.Location = New System.Drawing.Point(183, 553)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(0, 34)
+        Me.Label11.TabIndex = 7
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Panel4
         '
         Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
@@ -218,7 +248,7 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.GroupBox1)
         Me.Panel4.Controls.Add(Me.Label12)
         Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Location = New System.Drawing.Point(2, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(970, 699)
         Me.Panel4.TabIndex = 5
@@ -228,7 +258,7 @@ Partial Class Form1
         '
         Me.TextBox7.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.ForeColor = System.Drawing.Color.Green
-        Me.TextBox7.Location = New System.Drawing.Point(257, 190)
+        Me.TextBox7.Location = New System.Drawing.Point(370, 193)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -241,7 +271,7 @@ Partial Class Form1
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(261, 148)
+        Me.Label16.Location = New System.Drawing.Point(374, 151)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(75, 23)
         Me.Label16.TabIndex = 11
@@ -271,47 +301,24 @@ Partial Class Form1
         '
         Me.Panel5.BackColor = System.Drawing.Color.Transparent
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.TextBox5)
         Me.Panel5.Controls.Add(Me.TextBox4)
-        Me.Panel5.Controls.Add(Me.Label14)
         Me.Panel5.Controls.Add(Me.Label13)
         Me.Panel5.ForeColor = System.Drawing.Color.White
-        Me.Panel5.Location = New System.Drawing.Point(376, 133)
+        Me.Panel5.Location = New System.Drawing.Point(538, 136)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(519, 242)
+        Me.Panel5.Size = New System.Drawing.Size(241, 242)
         Me.Panel5.TabIndex = 9
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.Green
-        Me.TextBox5.Location = New System.Drawing.Point(341, 56)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox5.Size = New System.Drawing.Size(81, 165)
-        Me.TextBox5.TabIndex = 8
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.Green
-        Me.TextBox4.Location = New System.Drawing.Point(74, 56)
+        Me.TextBox4.Location = New System.Drawing.Point(80, 56)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox4.Size = New System.Drawing.Size(81, 165)
         Me.TextBox4.TabIndex = 7
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Georgia", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(284, 10)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(210, 29)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "DESCENDENTE"
         '
         'Label13
         '
@@ -328,6 +335,7 @@ Partial Class Form1
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.Font = New System.Drawing.Font("Lucida Sans Typewriter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(44, 262)
@@ -380,36 +388,6 @@ Partial Class Form1
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Ingresar Valores"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(3, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(967, 682)
-        Me.Panel3.TabIndex = 4
-        Me.Panel3.Visible = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Century", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label11.Location = New System.Drawing.Point(183, 553)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(0, 34)
-        Me.Label11.TabIndex = 7
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TextBox3
         '
@@ -491,6 +469,7 @@ Partial Class Form1
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Label5)
@@ -504,6 +483,22 @@ Partial Class Form1
         Me.Panel2.Size = New System.Drawing.Size(967, 552)
         Me.Panel2.TabIndex = 3
         Me.Panel2.Visible = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.SystemColors.Control
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button5.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(494, 444)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(148, 58)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "JUGAR REVANCHA"
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -527,7 +522,7 @@ Partial Class Form1
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(357, 448)
+        Me.Button1.Location = New System.Drawing.Point(221, 448)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(148, 44)
         Me.Button1.TabIndex = 6
@@ -631,7 +626,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(982, 736)
+        Me.ClientSize = New System.Drawing.Size(982, 733)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
@@ -645,14 +640,14 @@ Partial Class Form1
         Me.Panel6.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -664,10 +659,8 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AplicacionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BalotoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents MatrizToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
@@ -677,9 +670,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents JugarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label8 As Label
-    Friend WithEvents RevanchaToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
@@ -698,9 +689,7 @@ Partial Class Form1
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents RadioButton2 As RadioButton
@@ -713,4 +702,9 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Timer4 As Timer
+    Friend WithEvents BalotoToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents JugarToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents MatricesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AntisimetricaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button5 As Button
 End Class
